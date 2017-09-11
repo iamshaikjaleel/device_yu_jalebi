@@ -13,5 +13,4 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/full_jalebi.mk
+PRODUCT_MAKEFILES := device/yu/jalebi/aosp_jalebi.mk
