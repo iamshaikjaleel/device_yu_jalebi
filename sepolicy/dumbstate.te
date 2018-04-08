@@ -1,0 +1,16 @@
+allow dumpstate bg_boot_complete_prop:file { getattr open };
+allow dumpstate bg_daemon_prop:file { getattr open };
+allow dumpstate debugfs_mmc:dir search;
+allow dumpstate debugfs_mmc:file { getattr open read };
+allow dumpstate gatekeeper_service:service_manager find;
+allow dumpstate per_mgr_state_prop:file { getattr open };
+allow dumpstate qdma_prop:file { getattr open };
+allow dumpstate spcomlib_prop:file { getattr open };
+allow dumpstate sys_usb_controller_prop:file open;
+allow dumpstate sys_usb_tethering_prop:file { getattr open };
+allow dumpstate sysfs_zram:dir { open read search };
+allow dumpstate sysfs_zram:file { getattr open read };
+allow dumpstate uicc_prop:file { getattr open };
+allow dumpstate vendor_rild_libpath_prop:file { getattr open };
+allow dumpstate wcnss_prop:file { getattr open };
+allow dumpstate wififtmd_prop:file { getattr open };

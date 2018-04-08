@@ -1,0 +1,2 @@
+allow installd dumpstate:fd use;
+allow installd dumpstate:fifo_file { open read };

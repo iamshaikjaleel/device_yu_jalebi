@@ -1,0 +1,4 @@
+allow perfd self:capability dac_override;
+allow perfd system_server:dir search;
+allow perfd system_server:file { open read };
+allow perfd sysfs_kgsl:file write;
