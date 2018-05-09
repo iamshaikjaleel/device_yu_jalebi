@@ -95,6 +95,27 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_profiles_V1_0.xml:system/vendor/etc/media_profiles_V1_0.xml
 
+# Go Optimisations
+PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
+PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
+PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
+PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-image-profile.txt
+
+PRODUCT_PROPERTY_OVERRIDES += \
+     ro.config.low_ram=true \
+     ro.lmk.critical_upgrade=true \
+     ro.lmk.upgrade_pressure=40
+
+PRODUCT_PROPERTY_OVERRIDES += \
+     pm.dexopt.downgrade_after_inactive_days=10
+
+PRODUCT_PROPERTY_OVERRIDES += \
+     pm.dexopt.shared=quicken
+
+PRODUCT_PROPERTY_OVERRIDES += dalvik.vm.heapgrowthlimit=128m
+
+PRODUCT_PROPERTY_OVERRIDES += dalvik.vm.heapsize=256m
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:system/vendor/etc/permissions/android.hardware.audio.low_latency.xml \
