@@ -16,12 +16,12 @@
 $(call inherit-product, device/yu/jalebi/full_jalebi.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8916
 
-PRODUCT_NAME := lineage_jalebi
+PRODUCT_NAME := aosp_jalebi
 BOARD_VENDOR := yu
 PRODUCT_DEVICE := jalebi
 
@@ -34,3 +34,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE=YUNIQUE
 
 BUILD_FINGERPRINT := YU/YU4711/YU4711:5.1.1/LMY47V/1450865915:user/release-keys
+
+#Bootanimation res
+TARGET_BOOT_ANIMATION_RES := 720
