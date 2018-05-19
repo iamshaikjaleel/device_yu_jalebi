@@ -25,5 +25,9 @@ DEVICE_PACKAGE_OVERLAYS += \
 # Include package config fragments
 include $(LOCAL_PATH)/product/*.mk
 
+# Display
+PRODUCT_PACKAGES += \
+    copybit.msm8916
+
 # Call the proprietary setup
 $(call inherit-product, vendor/yu/jalebi/jalebi-vendor.mk)
