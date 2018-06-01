@@ -1,0 +1,5 @@
+#============= perfd ==============
+allow perfd hal_power_default:dir search;
+allow perfd hal_power_default:file { open read };
+allow perfd sysfs_kgsl:file write;
+allow perfd sysfs_thermal:file write;
