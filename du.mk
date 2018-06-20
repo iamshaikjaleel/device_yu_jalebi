@@ -22,7 +22,7 @@ $(call inherit-product, vendor/du/config/common_full_phone.mk)
 TARGET_BOARD_PLATFORM_VARIANT := msm8916
 
 # Inherit common Android Go configurations
-$(call inherit-product, build/target/product/go_defaults.mk)
+#$(call inherit-product, build/target/product/go_defaults.mk)
 #IS_GO_VERSION := true
 
 #Bootanimation res
