@@ -16,18 +16,19 @@
 $(call inherit-product, device/yu/jalebi/full_jalebi.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/nitrogen/products/common.mk)
 
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8916
 
 # Inherit common Android Go configurations
-#$(call inherit-product, build/target/product/go_defaults.mk)
+$(call inherit-product, build/target/product/go_defaults.mk)
 #IS_GO_VERSION := true
 
-PRODUCT_NAME := lineage_jalebi
+PRODUCT_NAME := nitrogen_jalebi
 BOARD_VENDOR := yu
 PRODUCT_DEVICE := jalebi
+TARGET_BOOT_ANIMATION_RES := 720
 
 PRODUCT_GMS_CLIENTID_BASE := android-micromax
 
